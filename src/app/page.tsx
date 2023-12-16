@@ -1,3 +1,4 @@
+import { Herr_Von_Muellerhoff } from "next/font/google";
 import Image from "next/image";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
         Maximize Your Land Investments with Land Mailer IO - Your Ultimate
         Mailing CRM!
       </h2>
+      <a href="/api/auth/login">Login</a>
 
       <p>
         Welcome to the game-changer in land investment management! Land Mailer
