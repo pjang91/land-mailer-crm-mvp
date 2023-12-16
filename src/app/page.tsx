@@ -1,7 +1,13 @@
 import { Herr_Von_Muellerhoff } from "next/font/google";
 import Image from "next/image";
+import { getSession } from "@auth0/nextjs-auth0";
+import { redirect } from "next/navigation";
 
-export default function Home() {
+export default async function Home() {
+  const session = await getSession();
+  if (session?.user) {
+    redirect("/dashboard");
+  }
   return (
     <div>
       <h2>
